@@ -42,5 +42,17 @@ namespace StringCalculator.Business.Tests.Converters
         {
             Assert.AreEqual(10, _calculator.Execute("1,2,3,4"));
         }
+
+        [TestMethod]
+        public void ShouldReturnSum_WhenStringContainsNewLineCharacters()
+        {
+            Assert.AreEqual(6, _calculator.Execute("1\n2,3"));
+        }
+
+        [TestMethod]
+        public void ShouldReturnSum_WhenStringContainsDifferentDelimiter()
+        {
+            Assert.AreEqual(3, _calculator.Execute("//;\n1;2"));
+        }
     }
 }
