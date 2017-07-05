@@ -30,5 +30,11 @@ namespace StringCalculator.Business.Tests.Converters
         {
             Assert.AreEqual(2, _calculator.Execute("2"));
         }
+
+        [TestMethod]
+        public void ShouldReturnThree_WhenStringContainsOneAndTwo()
+        {
+            Assert.AreEqual(3, _calculator.Execute("1,2"));
+        }
     }
 }
