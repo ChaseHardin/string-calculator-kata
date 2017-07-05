@@ -36,5 +36,11 @@ namespace StringCalculator.Business.Tests.Converters
         {
             Assert.AreEqual(3, _calculator.Execute("1,2"));
         }
+
+        [TestMethod]
+        public void ShouldReturnTenWithMithMultipleNumbers()
+        {
+            Assert.AreEqual(10, _calculator.Execute("1,2,3,4"));
+        }
     }
 }
